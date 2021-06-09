@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <div class="container-md d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-info bi bi-chevron-left" id="previous"></button>
+        <button type="button" class="btn btn-info bi bi-chevron-right" id="next"></button>
+    </div>
+    <div class="container-md swiper-container mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">Basic Python</div>
+        <div class="swiper-slide">Intermediate Python</div>
+        <div class="swiper-slide">Basic Machine Learning</div>
+        <div class="swiper-slide">Intermediate Machine Learning</div>
+        <div class="swiper-slide">Deep Learning</div>
+    </div>
+    <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./node_modules/swiper/swiper-bundle.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '#next',
+        prevEl: '#previous',
+    },
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+});
+    </script>
+    </body>
+</html>
